@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "title": "Monopoly",
+            "difficulty": 1,
+            "time": 180,
+            "min_players": 2,
+            "max_players": 8,
+            
+            "genres": [
+                "strategy",
+                "trading",
+                "family"
+                        
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Cluedo",
+            "difficulty": 2,
+            "time": 190,
+            "min_players": 2,
+            "max_players": 6,
+            
+            "genres": [
+                "strategy",
+                "trading",
+                "family"
+                        
+            ]
+        },
+
+        {
+            "id": 3,
+            "title": "Scrabble",
+            "difficulty": 1,
+            "time": 130,
+            "min_players": 2,
+            "max_players": 4,
+            
+            "genres": [
+                "strategy",
+                "trading",
+                "family"
+                        
+            ]
+        }
+
+
+    ]
+}
+
