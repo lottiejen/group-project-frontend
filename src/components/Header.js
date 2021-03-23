@@ -2,9 +2,9 @@
 
 const Header = () => {
     return (
-        <div className="mb-4 mt-4">
+        <header className="header mb-4 mt-4">
             <h1>App Title</h1>
-        </div>
+        </header>
     );
 };
 
