@@ -3,30 +3,31 @@ import Button from './Button';
 
 const Input = () => {
     return (
-        <>
-            <form>
+        <section className="d-flex flex-column align-items-center">
+            <form className="form-control d-flex flex-column  mb-4 searchform">
+                <h3>Game Finder</h3>
                 <label htmlFor="players">Number of Players</label>
-                <select id="players">
-                    <option value="2">Two Players</option>
-                    <option value="3">Three Players</option>
-                    <option value="4">Four Players</option>
-                    <option value="5">Five Players</option>
-                    <option value="6">Six Players</option>
-                    <option value="7">Seven Players</option>
-                    <option value="8">Eight Players</option>
+                <select className="mb-4 py-1" id="players">
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                    <option value="6">Six</option>
+                    <option value="7">Seven</option>
+                    <option value="8">Eight</option>
                 </select>
                 <label htmlFor="time">Time (minutes)</label>
-                <input type="number"></input>
+                <input className="mb-4 search-input" type="number"></input>
                 <label htmlFor="difficulty">Difficulty</label>
-                <select id="difficulty">
+                <select className="mb-4 py-1" id="difficulty">
                     <option value="1">Easy</option> 
                     <option value="2">Medium</option> 
                     <option value="3">Hard</option> 
                 </select>
-                <Button buttonText="Find A Game"/>
+                <Button buttonText="Find Me A Game"/>
+                <Button buttonText="Show All Games"/>
             </form>
-            <Button buttonText="Show All Games"/>
-        </>
+        </section>
     );
 };
 
