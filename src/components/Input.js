@@ -1,5 +1,6 @@
 // User input to filter down the database results
 import Button from './Button';
+import { Link } from 'react-router-dom'
 
 const Input = () => {
     return (
@@ -24,8 +25,12 @@ const Input = () => {
                     <option value="2">Medium</option> 
                     <option value="3">Hard</option> 
                 </select>
-                <Button buttonText="Find Me A Game"/>
-                <Button buttonText="Show All Games"/>
+                <Link to="/">
+                    <Button buttonClass="primary" buttonText="Find Me A Game"/>
+                </Link>
+                <Link to="/all">
+                    <Button buttonClass="primary" buttonText="Show All Games"/>
+                </Link>
             </form>
         </section>
     );
