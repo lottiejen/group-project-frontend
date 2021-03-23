@@ -5,8 +5,10 @@ import {singleGame} from '../data/dummyData';
 
 import Button from './Button';
 import gamestack from '../assets/gamesstack.jpg'
+import Reviews from './Reviews';
 
-let { title, difficulty, time, min_players, max_players, genres, description } = singleGame
+
+let { id, title, difficulty, time, min_players, max_players, genres, description } = singleGame
 
 const Game = () => {
     return (
@@ -36,6 +38,10 @@ const Game = () => {
             </article>
 
             <Button buttonText="Return to Search"/>
+            
+            <div className="mt-4">
+                <Reviews id= {id} />
+            </div>
         </section>
     );
 };

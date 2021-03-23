@@ -67,3 +67,28 @@ export const manyGames = {
 
     ]
 }
+
+
+export const reviews = 
+    {
+        "data": [
+            {
+                "id": 1,
+                "name": "Fred",
+                "review": "A great game!",
+                "rating": "5"
+            },
+            {
+                "id": 2,
+                "name": "George",
+                "review": "This game takes aaaaaages!",
+                "rating": "3"
+            },
+            {
+                "id": 3,
+                "name": "Albert",
+                "review": "This game is great for families",
+                "rating": "4"
+            }
+        ]
+    }
