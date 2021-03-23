@@ -1,0 +1,23 @@
+.info-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gamecard-img {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 0.75rem;
+    border-radius: 1.25rem;
+}
+
+.game-card {
+    background: $turquoise
+}
+
+.list-item {
+    list-style: "🎲";
+    margin-left: 1.5rem;
+}
+
+

@@ -9,9 +9,9 @@
             "max_players": 8,
             
             "genres": [
-                "strategy",
-                "trading",
-                "family"
+                "Strategy",
+                "Trading",
+                "Family"
                         
             ]
         },
@@ -24,9 +24,9 @@
             "max_players": 6,
             
             "genres": [
-                "strategy",
-                "trading",
-                "family"
+                "Strategy",
+                "Trading",
+                "Family"
                         
             ]
         },
@@ -40,9 +40,9 @@
             "max_players": 4,
             
             "genres": [
-                "strategy",
-                "trading",
-                "family"
+                "Strategy",
+                "Trading",
+                "Family"
                         
             ]
         }

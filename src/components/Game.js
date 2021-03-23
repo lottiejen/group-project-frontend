@@ -4,35 +4,39 @@
 import {singleGame} from '../data/dummyData';
 
 import Button from './Button';
+import gamestack from '../assets/gamesstack.jpg'
 
 let { title, difficulty, time, min_players, max_players, genres, description } = singleGame
 
 const Game = () => {
     return (
-        <>
-            <div>  
-                <figure>
-                    <img src="http://placekitten.com/300/200" alt=""/>
-                </figure>
+        <section className="d-flex flex-column align-items-center">
+            <article className="container-sm card game-card">
+                <figure>  
+                    <img className="gamecard-img" src={gamestack} alt=""/>
+                </figure>    
                 <h2>{title}</h2>
-                <p>Game description: {description}</p>
-                <ul>
-                    <li>Difficulty: {difficulty}</li>
-                    <li>Time: {time}</li>
-                    <li>Minimum Players: {min_players}</li>
-                    <li>Maximum Players: {max_players}</li>
-                </ul> 
-                <ul>
+                <p>{description}</p>
+                <h4>Game Information</h4>
+                <ul className="info-list">
+                    <li className="list-item"><b>Difficulty:</b> {difficulty === 1 ? "Easy" : 
+                        difficulty === 2 ? "Medium" : "Hard"}</li>
+                    <li className="list-item"><b>Time:</b> {time} Minutes</li>
+                    <li className="list-item"><b>Min Players:</b> {min_players}</li>
+                    <li className="list-item"><b>Max Players:</b> {max_players}</li>
+                </ul>
+                <h4 className="mt-4">Genres</h4> 
+                <ul className="info-list mb-4">
                     {genres.map ((genre) => (
-                        <li key={genre}>{genre}</li>
+                        <li className="list-item" key={genre}>{genre}</li>
                     ))}
                 </ul>
                 <Button buttonText="Previous Game"/>
                 <Button buttonText="Next Game"/>
-            </div>
+            </article>
 
             <Button buttonText="Return to Search"/>
-        </>
+        </section>
     );
 };
 

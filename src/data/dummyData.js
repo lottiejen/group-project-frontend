@@ -8,9 +8,9 @@ export const singleGame = {
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     
     "genres": [
-        "strategy",
-        "trading",
-        "family",                
+        "Strategy",
+        "Trading",
+        "Family",                
     ]
 }
 
@@ -26,9 +26,9 @@ export const manyGames = {
             "max_players": 8,
             
             "genres": [
-                "strategy",
-                "trading",
-                "family"
+                "Strategy",
+                "Trading",
+                "Family"
                         
             ]
         },
@@ -41,9 +41,9 @@ export const manyGames = {
             "max_players": 6,
             
             "genres": [
-                "strategy",
-                "trading",
-                "family"
+                "Strategy",
+                "Trading",
+                "Family"
                         
             ]
         },
@@ -57,9 +57,9 @@ export const manyGames = {
             "max_players": 4,
             
             "genres": [
-                "strategy",
-                "trading",
-                "family"
+                "Strategy",
+                "Trading",
+                "Family"
                         
             ]
         }
