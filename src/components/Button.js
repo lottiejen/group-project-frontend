@@ -1,4 +1,4 @@
-const Button = ({buttonText, handleClick}) => {
+const Button = ({buttonText, handleClick, buttonStyle}) => {
     return (
         <>
           <button onClick={handleClick}>{buttonText}</button>  
