@@ -19,11 +19,11 @@ const Game = () => {
                 <p>Game description: {description}</p>
                 <h3>Game Information</h3>
                 <ul className="info-list">
-                    <li className=""><b>Difficulty:</b> {difficulty === 1 ? "Easy" : 
+                    <li className="list-item"><b>Difficulty:</b> {difficulty === 1 ? "Easy" : 
                         difficulty === 2 ? "Medium" : "Hard"}</li>
-                    <li className=""><b>Time:</b> {time} minutes</li>
-                    <li className=""><b>Minimum Players:</b> {min_players}</li>
-                    <li className=""><b>Maximum Players:</b> {max_players}</li>
+                    <li className="list-item"><b>Time:</b> {time} Minutes</li>
+                    <li className="list-item"><b>Min Players:</b> {min_players}</li>
+                    <li className="list-item"><b>Max Players:</b> {max_players}</li>
                 </ul>
                 <h3 className="mt-4">Genres</h3> 
                 <ul className="info-list mb-4">
