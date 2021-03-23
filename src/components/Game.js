@@ -5,6 +5,7 @@ import {singleGame} from '../data/dummyData';
 
 import Button from './Button';
 import gamestack from '../assets/gamesstack.jpg'
+import { Link } from 'react-router-dom'
 
 let { title, difficulty, time, min_players, max_players, genres, description } = singleGame
 
@@ -31,11 +32,13 @@ const Game = () => {
                         <li className="list-item" key={genre}>{genre}</li>
                     ))}
                 </ul>
-                <Button buttonText="Previous Game"/>
-                <Button buttonText="Next Game"/>
+                <Button buttonClass="primary" buttonText="Previous Game"/>
+                <Button buttonClass="primary" buttonText="Next Game"/>
             </article>
 
-            <Button buttonText="Return to Search"/>
+            <Link to="/">
+                <Button buttonClass="primary" buttonText="Return to Search"/>
+            </Link>
         </section>
     );
 };
