@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 function App() {
   return (
     <Router>
-      <div className="container">
       <Header />
+      <div className="container">
       <Switch>
         <Route exact path="/">
           <Input />
