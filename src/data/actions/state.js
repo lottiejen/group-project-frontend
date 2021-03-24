@@ -6,3 +6,10 @@ export const setGames = (data) => {
         data: data
     }
 }
+
+export const setRecommendations = (data) => {
+    return {
+        type: "SET_RECOMMENDATIONS",
+        data: data,
+    }
+}

@@ -4,23 +4,27 @@
 import {singleGame} from '../../data/dummyData';
 
 import Button from '../Button/Button';
-import gamestack from '../../assets/gamesstack.jpg'
 import Reviews from '../Reviews/Reviews';
 import { Link } from 'react-router-dom'
 import GameInfo from '../GameInfo/GameInfo';
+import { Component } from 'react';
 
 
+class Game extends Component {
+    
+    
+    
+    render() {
+        
+        let { id, name, difficulty, time, min_players, max_players, genres, description, img_url } = this.props.game
 
-let { id, title, difficulty, time, min_players, max_players, genres, description } = singleGame
-
-const Game = () => {
-    return (
+        return (
         <section className="d-flex flex-column align-items-center">
             <article className="container-sm card game-card">
                 <figure>  
-                    <img className="gamecard-img" src={gamestack} alt=""/>
+                    <img className="gamecard-img" src={img_url} alt=""/>
                 </figure>    
-                <h2>{title}</h2>
+                <h2>{name}</h2>
                 <p>{description}</p>
                 <h4>Game Information</h4>
                 <GameInfo difficulty={ difficulty} time={ time } min_players={ min_players} max_players={ max_players}/>
@@ -37,11 +41,10 @@ const Game = () => {
             <div className="mt-4">
                 <Reviews id= {id} />
             </div>
-            <Link to="/">
-                <Button buttonClass="primary" buttonText="Return to Search"/>
-            </Link>
         </section>
-    );
-};
+            
+        );
+    }
+}
 
 export default Game;

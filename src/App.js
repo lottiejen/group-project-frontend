@@ -1,21 +1,23 @@
 import './App.css';
 import Header from  './components/Header/Header';
-import Input from './components/Input/Input';
-import Game from './components/Game/Game';
+import Input from './components/Input';
+import Game from './components/Game';
 import Games from './components/Games';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Router, Route, Switch } from 'react-router-dom';
+import history from './History';
 
 function App() {
   return (
-    <Router>
+    <Router history={ history }>
       <Header />
       <div className="container">
       <Switch>
         <Route exact path="/">
           <Input />
         </Route>
-        <Route exact path="/game">
-          <Game />          
+        <Route path="/games/:id" render={ ({ match }) => (
+          <Game gameID={match.params.id}/>
+        ) }>
         </Route>
         <Route exact path="/all">
           <Games />

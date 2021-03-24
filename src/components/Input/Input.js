@@ -1,11 +1,12 @@
 // User input to filter down the database results
 import Button from '../Button/Button';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 import boardgame from '../../assets/boardgame.png'
 import boardgame2 from '../../assets/boardgame2.png'
 
-const Input = () => {
+
+const Input = ( {fetchRecommendations, recommendations} ) => {
 
     const [players, setPlayers] = useState("2");
     const [time, setTime] = useState("");
@@ -32,7 +33,8 @@ const Input = () => {
             "difficulty": difficulty, 
         }
 
-        console.log(formData)
+        fetchRecommendations(formData);
+        
     }
 
     return (
@@ -83,9 +85,6 @@ const Input = () => {
                 </div>
                 
             </form>
-            <Link to="/all">
-                <Button buttonClass="primary" buttonText="Show All Games"/>
-            </Link>
         </section>
     );
 };

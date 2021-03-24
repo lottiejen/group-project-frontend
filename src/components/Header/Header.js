@@ -11,7 +11,7 @@ const Header = () => {
 
             <nav className="nav">
                 <ul className="nav__list">
-                    <li ><Link to="" className="nav__item">Game Reccomendation</Link></li>
+                    <li ><Link to="" className="nav__item">Game Recommendation</Link></li>
                     <li ><Link to="/all" className="nav__item">See All Games</Link></li>
                 </ul>
             </nav>
