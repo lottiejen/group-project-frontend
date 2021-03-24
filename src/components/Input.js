@@ -2,6 +2,8 @@
 import Button from './Button';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import boardgame from '../assets/boardgame.png'
+import boardgame2 from '../assets/boardgame2.png'
 
 const Input = () => {
 
@@ -35,13 +37,17 @@ const Input = () => {
 
     return (
         <section className="d-flex flex-column align-items-center">
-            <h3>Game Finder</h3>
-            <form onSubmit={handleSubmit} className="form-control d-flex flex-column  mb-4 searchform">
+            
+            <img className="icon__2" src={boardgame} alt=""/>
+             <img className="icon__3" src={boardgame2} alt=""/>
+            <form onSubmit={handleSubmit} className="form-control d-flex flex-column  mb-4 searchform glass">
+            <h3 className="searchform__title">Game Finder</h3>
+            <div className="searchform__inputs">
                 <label htmlFor="players">Number of Players</label>
                 <select 
                     value={players}
                     onChange={handlePlayers} 
-                    className="mb-4 py-1" 
+                    className="mb-4 py-1 searchform__input" 
                     id="players"
                 >
                     <option value="2">Two</option>
@@ -56,22 +62,25 @@ const Input = () => {
                 <input
                     value={time}
                     onChange={handleTime} 
-                    className="mb-4 search-input" 
+                    className="mb-4 searchform__input" 
                     type="number"
                 ></input>
                 <label htmlFor="difficulty">Difficulty</label>
                 <select
                     value={difficulty}
                     onChange={handleDifficulty} 
-                    className="mb-4 py-1" 
+                    className="mb-4 py-1 searchform__input" 
                     id="difficulty"
                 >
                     <option value="1">Easy</option> 
                     <option value="2">Medium</option> 
                     <option value="3">Hard</option> 
                 </select>
-                
-                <Button buttonClass="primary" buttonText="Find Me A Game"/>
+                </div>
+                <div className = "searchform__buttons">
+                    <Button buttonText="Find Me A Game" className="searchform__button"/>
+
+                </div>
                 
             </form>
             <Link to="/all">

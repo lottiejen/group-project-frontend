@@ -1,7 +1,12 @@
+body {
+    background: linear-gradient( $turquoise, #DFF6F4);
+    min-height: 100vh;
+}
+
+
 .header {
   
     width: 100%;
-    background-color: $turquoise;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,15 +20,11 @@
     }
 
     &__title {
-        color: white;
+        letter-spacing: 5px;
         margin: 0.5rem;
-        text-transform: uppercase;
         font-size: 2.5rem;
         font-weight: 600;
-
-        &:hover{
-            color: $yellow;
-        }
+        font-family: $header-font;
     }
 
     &__subtitle {
@@ -54,7 +55,27 @@
         font-size: 1.2rem;
 
         &:hover{
-            color: $yellow;
+            color: $orange;
+            text-decoration: underline;
         }
     }
 }
+
+
+
+
+h1, h3 {  
+    font-family: $header-font;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    color: $yellow;
+    text-shadow: 
+        -1px -1px 0 $purple, 1px -1px 0 $purple, -1px 1px 0 $purple, 1px 1px 0 $purple, 
+        1px 0px 0px $turquoise, 0px 1px 0px $turquoise, 2px 1px 0px $turquoise, 1px 2px 0px $turquoise, 3px 2px 0px $turquoise, 2px 3px 0px $turquoise, 4px 3px 0px $turquoise, 3px 4px 0px $turquoise, 5px 4px 0px $turquoise,
+        3px 5px 0px $purple, 6px 5px 0px $purple, 
+        -1px 2px 0 $purple, 0 3px 0 $purple, 1px 4px 0 $purple, 2px 5px 0px $purple,
+        2px -1px 0 $purple, 3px 0 0 $purple, 4px 1px 0 $purple, 5px 2px 0px $purple, 6px 3px 0 $purple, 7px 4px 0 $purple,
+      10px 10px 4px $coral;
+
+  }
