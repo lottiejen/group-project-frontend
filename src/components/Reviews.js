@@ -7,12 +7,12 @@ import NewReview from './NewReview';
 const Reviews = ( props ) => {
 
     const reviewStyle = {
-        width: "80%",
+        // width: "80%",
     }
 
     return (
         <> 
-        <div className = "container">
+        {/* <div className = "container"> */}
             <h3> Reviews </h3>
             {reviews.data.map( (review, index) => {
                 return (
@@ -26,7 +26,7 @@ const Reviews = ( props ) => {
                 )
             })}
             <NewReview />
-            </div>
+            {/* </div> */}
         </>
     )
 
