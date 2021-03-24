@@ -1,7 +1,7 @@
 import './App.css';
-import Header from  './components/Header';
-import Input from './components/Input';
-import Game from './components/Game';
+import Header from  './components/Header/Header';
+import Input from './components/Input/Input';
+import Game from './components/Game/Game';
 import Games from './components/Games';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 

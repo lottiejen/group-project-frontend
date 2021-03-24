@@ -18,7 +18,7 @@ export const singleGame = {
 export const manyGames = {
     "data": [
         {
-            "id": 1,
+            "id": 7,
             "title": "Monopoly",
             "difficulty": 1,
             "time": 180,
@@ -33,7 +33,7 @@ export const manyGames = {
             ]
         },
         {
-            "id": 2,
+            "id": 12,
             "title": "Cluedo",
             "difficulty": 2,
             "time": 190,
@@ -49,7 +49,7 @@ export const manyGames = {
         },
 
         {
-            "id": 3,
+            "id": 73,
             "title": "Scrabble",
             "difficulty": 1,
             "time": 130,

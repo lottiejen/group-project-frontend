@@ -1,9 +1,9 @@
 // User input to filter down the database results
-import Button from './Button';
+import Button from '../Button/Button';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import boardgame from '../assets/boardgame.png'
-import boardgame2 from '../assets/boardgame2.png'
+import boardgame from '../../assets/boardgame.png'
+import boardgame2 from '../../assets/boardgame2.png'
 
 const Input = () => {
 

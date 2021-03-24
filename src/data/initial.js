@@ -1,4 +1,5 @@
 const initial = {
-    userSubmit: false,
-    games: [],
+    games: {}
 }
+
+export default initial;

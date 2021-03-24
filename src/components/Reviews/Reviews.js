@@ -1,7 +1,7 @@
-import {reviews} from '../data/dummyData';
+import {reviews} from '../../data/dummyData';
 
 import Stars from './Stars';
-import NewReview from './NewReview';
+import NewReview from '../NewReview/NewReview';
 
 //passed in game ID so can do an API call to get the reviews for that game -> when time comes for linking up API
 const Reviews = ( props ) => {

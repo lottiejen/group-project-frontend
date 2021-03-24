@@ -1,13 +1,13 @@
 // A single game view which returns after the user inputs - retrives data from the store.
 
 // Dummy data import
-import {singleGame} from '../data/dummyData';
+import {singleGame} from '../../data/dummyData';
 
-import Button from './Button';
-import gamestack from '../assets/gamesstack.jpg'
-import Reviews from './Reviews';
+import Button from '../Button/Button';
+import gamestack from '../../assets/gamesstack.jpg'
+import Reviews from '../Reviews/Reviews';
 import { Link } from 'react-router-dom'
-import GameInfo from './GameInfo';
+import GameInfo from '../GameInfo/GameInfo';
 
 
 

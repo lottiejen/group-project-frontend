@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import ReactStars from "react-rating-stars-component";
-import Button from "./Button";
+import Button from "../Button/Button";
 
-const NewReview = () => {
+const NewReview = ( { gameID, handleNewReview }) => {
 
     const [name, setName] = useState("");
     const [review, setReview] = useState("");
@@ -32,6 +32,7 @@ const NewReview = () => {
             setMessage(false)
 
             let data = {
+            "gameID" : gameID,
             "name" : name,
             "review" : review,
             "rating" : stars
@@ -40,7 +41,7 @@ const NewReview = () => {
             setSent(true)
         
             //-------------------- call the API POST request --------------------
-            console.log(data)
+            handleNewReview(data);
 
         } else {
             setMessage(true)
