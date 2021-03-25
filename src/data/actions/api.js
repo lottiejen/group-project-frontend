@@ -4,15 +4,16 @@ import {manyGames} from '../dummyData'
 import {setGames, setRecommendations} from './state'
 import history from '../../History';
 
-export const newReview = (data) => {
+export const newReview = (data) => (dispatch) => {
 
-    axios.post(`/game/${data.gameID}/reviews`, {
+    axios.post(`/games/${data.gameID}/reviews`, {
         "name" : data.name,
         "review" : data.review,
-        "rating" : data.stars
-    }).then( () => {
-        //do something
+        "rating" : data.rating
+    }).then( ({data}) => {
+        console.log(data.data)
     })
+    console.log(data)
 }
 
 export const getGames = () => {

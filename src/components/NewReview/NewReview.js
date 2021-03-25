@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ReactStars from "react-rating-stars-component";
+import { bindActionCreators } from 'redux';
 import Button from "../Button/Button";
 
 const NewReview = ( { gameID, handleNewReview }) => {
@@ -12,12 +13,10 @@ const NewReview = ( { gameID, handleNewReview }) => {
 
     const handleName = (e) => {
         setName(e.currentTarget.value);
-        console.log(name)
     }
 
     const handleReview = (e) => {
         setReview(e.currentTarget.value);
-        console.log(review)
     }
 
     const handleStars = (newRating) => {
@@ -26,7 +25,6 @@ const NewReview = ( { gameID, handleNewReview }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         if(name.length > 1 && review.length > 1 && stars > 0){
 
             setMessage(false)

@@ -17,7 +17,7 @@ class Game extends Component {
     render() {
         
         let { id, name, difficulty, time, min_players, max_players, genres, description, img_url } = this.props.game
-
+console.log(this.props)
         return (
         <section className="d-flex flex-column align-items-center">
             <article className="container-sm card game-card">

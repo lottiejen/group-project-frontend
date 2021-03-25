@@ -2,11 +2,7 @@ import { connect } from 'react-redux';
 import NewReview from './NewReview';
 import { newReview } from '../../data/actions/api'
 
-const matchStateToProps = (state) => {
-    return {
-        gameID : state.gameID
-    }
-}
+
 
 
 const matchDispatchToProps = dispatch => {
@@ -16,4 +12,4 @@ const matchDispatchToProps = dispatch => {
     }
 }
 
-export default connect(matchStateToProps, matchDispatchToProps)(NewReview);
+export default connect(null, matchDispatchToProps)(NewReview);
