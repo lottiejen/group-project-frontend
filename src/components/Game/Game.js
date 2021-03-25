@@ -1,22 +1,47 @@
 // A single game view which returns after the user inputs - retrives data from the store.
 
-// Dummy data import
-import {singleGame} from '../../data/dummyData';
-
 import Button from '../Button/Button';
-import Reviews from '../Reviews/Reviews';
-import { Link } from 'react-router-dom'
+import Reviews from '../Reviews';
 import GameInfo from '../GameInfo/GameInfo';
 import { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 
 class Game extends Component {
-    
+    constructor(props){
+        super(props);
+
+        this.handleClickNext = this.handleClickNext.bind(this)
+    }
+
+    componentDidMount() {
+        this.props.incrementDisplayGame()
+        this.props.handleLoad()
+    }
+
+    componentDidUpdate(previousProps) {
+
+        if(previousProps.gameID !== this.props.gameID){
+            this.props.incrementDisplayGame();
+        }
+    }
+
+    handleClickNext(e){
+        e.preventDefault();
+        let { id } = this.props.game;
+        this.props.nextGame(id)
+    }
     
     
     render() {
         
+        if(!this.props.game){
+            return null
+        } 
+
         let { id, name, difficulty, time, min_players, max_players, genres, description, img_url } = this.props.game
+
+        let { nextGameID } = this.props
 
         return (
         <section className="d-flex flex-column align-items-center">
@@ -34,8 +59,9 @@ class Game extends Component {
                         <li className="list-item" key={genre}>{genre}</li>
                     ))}
                 </ul>
-                <Button buttonClass="primary" buttonText="Previous Game"/>
-                <Button buttonClass="primary" buttonText="Next Game"/>
+                {nextGameID === undefined ? null : <Link to={`/games/${nextGameID}`} >Next Game</Link>}
+                
+                {/* <Button buttonClass="primary" buttonText="Next Game"/> */}
             </article>
             
             <div className="mt-4">

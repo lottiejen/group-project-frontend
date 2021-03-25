@@ -1,22 +1,25 @@
 import {reviews} from '../../data/dummyData';
 
+import {Component} from 'react';
+
 import Stars from './Stars';
 import NewReview from '../NewReview/NewReview';
 
 //passed in game ID so can do an API call to get the reviews for that game -> when time comes for linking up API
-const Reviews = ( props ) => {
-
-    const reviewStyle = {
-        // width: "80%",
+class Reviews extends Component 
+{
+    componentDidMount(){
+        this.props.fetchReviews(this.props.id);
     }
 
-    return (
+    render() {
+        return (
         <> 
         {/* <div className = "container"> */}
             <h3> Reviews </h3>
             {reviews.data.map( (review, index) => {
                 return (
-                    <div className="card" key={index} style = {reviewStyle}>
+                    <div className="card" key={index} >
                         <div className="card-body" >
                            <Stars className="card-title" stars = {review.rating} />
                             <h6 className="card-subtitle"> {review.name} </h6>
@@ -29,6 +32,8 @@ const Reviews = ( props ) => {
             {/* </div> */}
         </>
     )
+    }
+    
 
 }
 

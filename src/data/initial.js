@@ -1,6 +1,7 @@
 const initial = {
     games: {},
-    recommendations: {},
+    recommendations: [],
+    nextGame: null
 }
 
 export default initial;
