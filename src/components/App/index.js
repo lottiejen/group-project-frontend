@@ -3,7 +3,7 @@ import App from './App';
 
 const mapStateToProps = (state) => {
     return {
-        gameID: state.displayedGame
+        gameID: state.nextGame
     }
 }
 

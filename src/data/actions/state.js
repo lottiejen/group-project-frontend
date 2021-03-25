@@ -14,9 +14,9 @@ export const setRecommendations = (data) => {
     }
 }
 
-export const nextGame = (gameID) => {
+
+export const incrementGame = () => {
     return {
-        type: "NEXT_GAME",
-        gameID: gameID
+        type: "INCREMENT_GAME"
     }
 }

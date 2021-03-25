@@ -1,16 +1,19 @@
 import { connect } from 'react-redux';
 import Game from './Game'
-import { nextGame } from '../../data/actions/state';
+import { incrementGame} from '../../data/actions/state';
+import {getSingleGame} from '../../data/actions/api'
 
 const mapStateToProps = (state, { gameID }) => {
     return {
-        game: state.recommendations[state.displayedGame],
+        game: state.games[gameID],
+        nextGameID: state.recommendations[state.nextGame]
     }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, { gameID }) => {
     return {
-        nextGame: (gameID) => dispatch(nextGame(gameID))
+        incrementDisplayGame: () => dispatch(incrementGame()),
+        handleLoad: () => dispatch(getSingleGame(gameID))
     }
 }
 

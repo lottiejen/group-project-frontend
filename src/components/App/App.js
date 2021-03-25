@@ -19,7 +19,7 @@ class App extends Component
         <Route exact path="/">
           <Input />
         </Route>
-        <Route path={`/games/:${this.props.gameID}`} render={ ({ match }) => (
+        <Route path={`/games/:id`} render={ ({ match }) => (
           <Game gameID={match.params.id}/>
         ) }>
         </Route>
