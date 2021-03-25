@@ -1,4 +1,3 @@
-
 const setGames = (state, action) => {
 
     const transformedData = action.data.reduce( (acc, game) => {
@@ -37,13 +36,20 @@ const setGameReviews = (state, action) => {
         reviews: action.data
     }
 }
-
+const setError = (state, action) => {
+    return {
+        ...state,
+        error: action.payload,
+    }
+}
+    
 const reducer = (state, action) => {
     switch (action.type) {
         case "SET_GAMES": return setGames(state, action)
         case "SET_RECOMMENDATIONS": return setRecommendations(setGames(state, action), action)
         case "INCREMENT_GAME": return incrementGame(state)
         case "SET_REVIEWS": return setGameReviews(state, action)
+        case "ERROR": return setError(state, action)
         default: return state;
     }
 }

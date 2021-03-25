@@ -6,6 +6,8 @@ import Games from '../Games';
 import { Router, Route, Switch } from 'react-router-dom';
 import history from '../../History';
 import { Component } from 'react';
+import Error from '../Error';
+
 class App extends Component 
 {
 
@@ -27,6 +29,7 @@ class App extends Component
           <Games />
         </Route>
       </Switch>
+      <Error />
       </div>
     </Router>
   )

@@ -2,7 +2,8 @@ const initial = {
     games: {},
     recommendations: [],
     nextGame: null,
-    reviews: []
+    reviews: [],
+    error: "",
 }
 
 export default initial;

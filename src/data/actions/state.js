@@ -27,3 +27,10 @@ export const setReviews = (data) => {
         data: data
     }
 }
+    
+export const setError = (message) => {
+    return {
+        type: "ERROR",
+        payload: message,
+    }
+}
