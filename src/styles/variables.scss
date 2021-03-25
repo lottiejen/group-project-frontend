@@ -11,3 +11,33 @@ $purple:#6e1f58;
 
 @import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
 $header-font: 'Kavoon', cursive;
+
+.header__style{  
+    font-family: $header-font;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 5px;
+    color: $yellow;
+    text-shadow: 
+        -1px -1px 0 $purple, 1px -1px 0 $purple, -1px 1px 0 $purple, 1px 1px 0 $purple, 
+        1px 0px 0px $turquoise, 0px 1px 0px $turquoise, 2px 1px 0px $turquoise, 1px 2px 0px $turquoise, 3px 2px 0px $turquoise, 2px 3px 0px $turquoise, 4px 3px 0px $turquoise, 3px 4px 0px $turquoise, 5px 4px 0px $turquoise,
+        3px 5px 0px $purple, 6px 5px 0px $purple, 
+        -1px 2px 0 $purple, 0 3px 0 $purple, 1px 4px 0 $purple, 2px 5px 0px $purple,
+        2px -1px 0 $purple, 3px 0 0 $purple, 4px 1px 0 $purple, 5px 2px 0px $purple, 6px 3px 0 $purple, 7px 4px 0 $purple,
+      10px 10px 4px $coral;
+
+  }
+
+  .glass {
+    background: white;
+    width: 70%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex;
+  }

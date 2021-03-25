@@ -45,26 +45,33 @@ class Game extends Component {
 
         return (
         <section className="d-flex flex-column align-items-center">
-            <article className="container-sm card game-card">
-                <figure>  
+            <article className="container-sm card game-card glass">
+                <figure className="gamecard__figure">  
                     <img className="gamecard-img" src={img_url} alt=""/>
                 </figure>    
-                <h2>{name}</h2>
+                <h2 className="gamecard__title header__style ">{name}</h2>
                 <p>{description}</p>
-                <h4>Game Information</h4>
+                <h4 className=" gamecard__subtitle header__style">Game Information</h4>
                 <GameInfo difficulty={ difficulty} time={ time } min_players={ min_players} max_players={ max_players}/>
-                <h4 className="mt-4">Genres</h4> 
-                <ul className="info-list mb-4">
+                <h4 className="mt-4 gamecard__subtitle header__style">Genres</h4> 
+                <ul className="mb-4">
                     {genres.map ((genre) => (
-                        <li className="list-item" key={genre}>{genre}</li>
+                        <li className="badge gamecard__genre" key={genre}>{genre}</li>
                     ))}
                 </ul>
-                {nextGameID === undefined ? null : <Link to={`/games/${nextGameID}`} >Next Game</Link>}
                 
-                {/* <Button buttonClass="primary" buttonText="Next Game"/> */}
+                {nextGameID === undefined ? null : 
+                <>
+                    <p className="gamecard__text">Don't fancy playing this game? </p>
+                    <p className="gamecard__text">Click below for the next recommendation!</p>
+                    <div className="button">
+                        <Link to={`/games/${nextGameID}`} ><p className="gamecard__nextlink header__style">Next Game</p></Link>
+                    </div>
+                </>}
+
             </article>
             
-            <div className="mt-4">
+            <div className="mt-4 reviews__container">
                 <Reviews id= {id} />
             </div>
         </section>

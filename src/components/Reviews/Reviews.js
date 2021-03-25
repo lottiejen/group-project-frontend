@@ -15,11 +15,10 @@ class Reviews extends Component
     render() {
         return (
         <> 
-        {/* <div className = "container"> */}
-            <h3> Reviews </h3>
+            <h3 className="header__style"> Reviews </h3>
             {reviews.data.map( (review, index) => {
                 return (
-                    <div className="card" key={index} >
+                    <div className=" reviews__card card" key={index} >
                         <div className="card-body" >
                            <Stars className="card-title" stars = {review.rating} />
                             <h6 className="card-subtitle"> {review.name} </h6>
@@ -28,8 +27,9 @@ class Reviews extends Component
                     </div>
                 )
             })}
-            <NewReview />
-            {/* </div> */}
+            <div className="reviews__newreview">
+                <NewReview />
+            </div>
         </>
     )
     }

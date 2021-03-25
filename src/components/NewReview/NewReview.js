@@ -50,7 +50,7 @@ const NewReview = ( { gameID, handleNewReview }) => {
     }
 
     const formStyle={
-        width: "80%",
+        width: "100%",
     }
 
     const inputStyle = {
