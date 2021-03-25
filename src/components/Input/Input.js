@@ -43,7 +43,7 @@ const Input = ( {fetchRecommendations, recommendations} ) => {
             <img className="icon__2" src={boardgame} alt=""/>
              <img className="icon__3" src={boardgame2} alt=""/>
             <form onSubmit={handleSubmit} className="form-control d-flex flex-column  mb-4 searchform glass">
-            <h3 className="searchform__title">Game Finder</h3>
+            <h3 className="searchform__title header__style">Game Finder</h3>
             <div className="searchform__inputs">
                 <label htmlFor="players">Number of Players</label>
                 <select 

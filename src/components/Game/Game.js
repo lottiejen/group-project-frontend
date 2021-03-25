@@ -1,44 +1,78 @@
 // A single game view which returns after the user inputs - retrives data from the store.
 
-// Dummy data import
-import {singleGame} from '../../data/dummyData';
-
 import Button from '../Button/Button';
-import Reviews from '../Reviews/Reviews';
-import { Link } from 'react-router-dom'
+import Reviews from '../Reviews';
 import GameInfo from '../GameInfo/GameInfo';
 import { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 
 class Game extends Component {
-    
+    constructor(props){
+        super(props);
+
+        this.handleClickNext = this.handleClickNext.bind(this)
+    }
+
+    componentDidMount() {
+        this.props.incrementDisplayGame()
+        this.props.handleLoad()
+    }
+
+    componentDidUpdate(previousProps) {
+
+        if(previousProps.gameID !== this.props.gameID){
+            this.props.incrementDisplayGame();
+        }
+    }
+
+    handleClickNext(e){
+        e.preventDefault();
+        let { id } = this.props.game;
+        this.props.nextGame(id)
+    }
     
     
     render() {
         
+        if(!this.props.game){
+            return null
+        } 
+
         let { id, name, difficulty, time, min_players, max_players, genres, description, img_url } = this.props.game
-console.log(this.props)
+
+
+        let { nextGameID } = this.props
+
         return (
         <section className="d-flex flex-column align-items-center">
-            <article className="container-sm card game-card">
-                <figure>  
+            <article className="container-sm card game-card glass">
+                <figure className="gamecard__figure">  
                     <img className="gamecard-img" src={img_url} alt=""/>
                 </figure>    
-                <h2>{name}</h2>
+                <h2 className="gamecard__title header__style ">{name}</h2>
                 <p>{description}</p>
-                <h4>Game Information</h4>
+                <h4 className=" gamecard__subtitle header__style">Game Information</h4>
                 <GameInfo difficulty={ difficulty} time={ time } min_players={ min_players} max_players={ max_players}/>
-                <h4 className="mt-4">Genres</h4> 
-                <ul className="info-list mb-4">
+                <h4 className="mt-4 gamecard__subtitle header__style">Genres</h4> 
+                <ul className="mb-4">
                     {genres.map ((genre) => (
-                        <li className="list-item" key={genre}>{genre}</li>
+                        <li className="badge gamecard__genre" key={genre}>{genre}</li>
                     ))}
                 </ul>
-                <Button buttonClass="primary" buttonText="Previous Game"/>
-                <Button buttonClass="primary" buttonText="Next Game"/>
+                
+                {nextGameID === undefined ? null : 
+                <>
+                    <p className="gamecard__text">Don't fancy playing this game? </p>
+                    <p className="gamecard__text">Click below for the next recommendation!</p>
+                    <div className="button">
+                        <Link to={`/games/${nextGameID}`} ><p className="gamecard__nextlink header__style">Next Game</p></Link>
+                    </div>
+                </>}
+
             </article>
             
-            <div className="mt-4">
+            <div className="mt-4 reviews__container">
                 <Reviews id= {id} />
             </div>
         </section>

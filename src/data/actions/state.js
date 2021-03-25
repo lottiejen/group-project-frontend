@@ -13,3 +13,10 @@ export const setRecommendations = (data) => {
         data: data,
     }
 }
+
+
+export const incrementGame = () => {
+    return {
+        type: "INCREMENT_GAME"
+    }
+}

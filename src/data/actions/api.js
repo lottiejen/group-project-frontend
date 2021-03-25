@@ -1,6 +1,5 @@
 //API Actions
 import axios from '../../data/axios-config'
-import {manyGames} from '../dummyData'
 import {setGames, setRecommendations} from './state'
 import history from '../../History';
 
@@ -26,6 +25,16 @@ export const getGames = () => {
 
 }
 
+export const getSingleGame = (gameID) => {
+
+    return (dispatch) => {
+        axios.get(`/games/${gameID}`).then( ({data}) => {
+            dispatch(setGames([data.data]))
+        })
+    }
+
+}
+
 export const getRecommendations = (data) => {
     
     return (dispatch) => {
@@ -43,3 +52,13 @@ export const getRecommendations = (data) => {
 
     })
 }}
+
+export const getReviews = (gameID) => {
+    
+    return (dispatch) => {
+        axios.get(`/games/${gameID}/reviews`).then( ( {data}) => {
+            // console.log(data.data);
+            // console.log("here")
+        }).catch( (error) => console.log(error))
+    }
+}

@@ -1,7 +1,7 @@
 // A view to show all of the games which are in the database
 import GameInfo from '../GameInfo/GameInfo';
 import { Component } from 'react';
-// let gamesData = manyGames.data;
+import { Link } from 'react-router-dom'
 
 
 class Games extends Component {
@@ -19,15 +19,17 @@ class Games extends Component {
             <section className="row card-container">
                 {Object.values(gamesData).map((game, index) => (
                     <article className="gamelisting col-md-6" key={index}>
-                        <h2>{game.name}</h2>
+                        <Link to={`games/${index + 1}`}>
+                            <h2>{game.name}</h2>
+                        </Link>
                         
 
                         <GameInfo difficulty={game.difficulty} time={game.time} min_players={game.min_players} max_players={game.max_players} />
 
 
-                        <ul>
+                        <ul className="mt-4">
                             {game.genres.map((genre, index) => (
-                                <li key={index}>{genre}</li>
+                                <li className="badge gamecard__genre" key={index}>{genre}</li>
                             ))}
                         </ul>
                     </article>
