@@ -42,3 +42,13 @@ export const getRecommendations = (data) => {
 
     })
 }}
+
+export const getReviews = (gameID) => {
+    
+    return (dispatch) => {
+        axios.get(`/games/${gameID}/reviews`).then( ( {data}) => {
+            // console.log(data.data);
+            // console.log("here")
+        }).catch( (error) => console.log(error))
+    }
+}

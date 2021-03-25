@@ -1,17 +1,24 @@
 // A single game view which returns after the user inputs - retrives data from the store.
 
-// Dummy data import
-import {singleGame} from '../../data/dummyData';
-
 import Button from '../Button/Button';
-import Reviews from '../Reviews/Reviews';
-import { Link } from 'react-router-dom'
+import Reviews from '../Reviews';
 import GameInfo from '../GameInfo/GameInfo';
 import { Component } from 'react';
 
 
 class Game extends Component {
-    
+    constructor(props){
+        super(props);
+
+        this.handleClickNext = this.handleClickNext.bind(this)
+    }
+
+
+    handleClickNext(e){
+        e.preventDefault();
+        let { id } = this.props.game;
+        this.props.nextGame(id)
+    }
     
     
     render() {
@@ -34,8 +41,8 @@ class Game extends Component {
                         <li className="list-item" key={genre}>{genre}</li>
                     ))}
                 </ul>
-                <Button buttonClass="primary" buttonText="Previous Game"/>
-                <Button buttonClass="primary" buttonText="Next Game"/>
+                <button onClick={this.handleClickNext}>Next Game</button>
+                {/* <Button buttonClass="primary" buttonText="Next Game"/> */}
             </article>
             
             <div className="mt-4">

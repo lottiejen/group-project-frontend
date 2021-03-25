@@ -13,3 +13,10 @@ export const setRecommendations = (data) => {
         data: data,
     }
 }
+
+export const nextGame = (gameID) => {
+    return {
+        type: "NEXT_GAME",
+        gameID: gameID
+    }
+}

@@ -1,13 +1,17 @@
 import './App.css';
-import Header from  './components/Header/Header';
-import Input from './components/Input';
-import Game from './components/Game';
-import Games from './components/Games';
+import Header from  '../Header/Header';
+import Input from '../Input';
+import Game from '../Game';
+import Games from '../Games';
 import { Router, Route, Switch } from 'react-router-dom';
-import history from './History';
+import history from '../../History';
+import { Component } from 'react';
+class App extends Component 
+{
 
-function App() {
-  return (
+
+  render() {
+    return (
     <Router history={ history }>
       <Header />
       <div className="container">
@@ -15,7 +19,7 @@ function App() {
         <Route exact path="/">
           <Input />
         </Route>
-        <Route path="/games/:id" render={ ({ match }) => (
+        <Route path={`/games/:${this.props.gameID}`} render={ ({ match }) => (
           <Game gameID={match.params.id}/>
         ) }>
         </Route>
@@ -26,6 +30,8 @@ function App() {
       </div>
     </Router>
   )
+  }
+  
 }
 
 export default App;
