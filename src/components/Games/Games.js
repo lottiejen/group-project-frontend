@@ -25,9 +25,9 @@ class Games extends Component {
                         <GameInfo difficulty={game.difficulty} time={game.time} min_players={game.min_players} max_players={game.max_players} />
 
 
-                        <ul>
+                        <ul className="mt-4">
                             {game.genres.map((genre, index) => (
-                                <li key={index}>{genre}</li>
+                                <li className="badge gamecard__genre" key={index}>{genre}</li>
                             ))}
                         </ul>
                     </article>

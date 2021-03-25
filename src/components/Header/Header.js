@@ -5,7 +5,7 @@ const Header = () => {
         <header className="header mb-4">
             <div className="header__container">
                 <small className="header__subtitle"> What do you want to play tonight?</small>
-                <h1 className="header__title">Haven't got a Cluedo</h1>
+                <h1 className="header__title header__style">Haven't got a Cluedo</h1>
             </div>
             
 
