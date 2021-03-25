@@ -18,8 +18,8 @@ class Games extends Component {
         return (
             <section className="row card-container">
                 {Object.values(gamesData).map((game, index) => (
-                    <article className="gamelisting col-md-6" key={index}>
-                        <h2>{game.name}</h2>
+                    <article className="gamelisting" key={index}>
+                        <h2 className="card-title"> {game.name}</h2>
                         
 
                         <GameInfo difficulty={game.difficulty} time={game.time} min_players={game.min_players} max_players={game.max_players} />
