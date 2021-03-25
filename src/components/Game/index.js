@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import Game from './Game'
 import { incrementGame} from '../../data/actions/state';
-import {getSingleGame} from '../../data/actions/api'
+import {getSingleGame} from '../../data/actions/api';
+import { getReviews } from '../../data/actions/api'
 
 const mapStateToProps = (state, { gameID }) => {
     return {
@@ -13,7 +14,8 @@ const mapStateToProps = (state, { gameID }) => {
 const mapDispatchToProps = (dispatch, { gameID }) => {
     return {
         incrementDisplayGame: () => dispatch(incrementGame()),
-        handleLoad: () => dispatch(getSingleGame(gameID))
+        handleLoad: () => dispatch(getSingleGame(gameID)),
+        fetchReviews: (gameID) => dispatch(getReviews(gameID))
     }
 }
 

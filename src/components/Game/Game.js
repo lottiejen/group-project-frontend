@@ -17,6 +17,7 @@ class Game extends Component {
     componentDidMount() {
         this.props.incrementDisplayGame()
         this.props.handleLoad()
+ 
     }
 
     componentDidUpdate(previousProps) {
@@ -24,6 +25,7 @@ class Game extends Component {
         if(previousProps.gameID !== this.props.gameID){
             this.props.incrementDisplayGame();
         }
+        
     }
 
     handleClickNext(e){
