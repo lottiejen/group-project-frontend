@@ -20,3 +20,10 @@ export const incrementGame = () => {
         type: "INCREMENT_GAME"
     }
 }
+
+export const setError = (message) => {
+    return {
+        type: "ERROR",
+        payload: message,
+    }
+}

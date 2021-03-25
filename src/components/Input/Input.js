@@ -62,6 +62,7 @@ const Input = ( {fetchRecommendations, recommendations} ) => {
                 </select>
                 <label htmlFor="time">Time (minutes)</label>
                 <input
+                    required
                     value={time}
                     onChange={handleTime} 
                     className="mb-4 searchform__input" 
