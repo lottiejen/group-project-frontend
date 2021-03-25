@@ -20,3 +20,10 @@ export const incrementGame = () => {
         type: "INCREMENT_GAME"
     }
 }
+
+export const setReviews = (data) => {
+    return {
+        type: "SET_REVIEWS",
+        data: data
+    }
+}

@@ -4,7 +4,7 @@ import { getReviews } from '../../data/actions/api'
 
 const mapStateToProps = (state) => {
     return {
-       
+       reviews: state.reviews
     }
 }
 

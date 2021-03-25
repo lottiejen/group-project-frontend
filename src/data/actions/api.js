@@ -1,6 +1,6 @@
 //API Actions
 import axios from '../../data/axios-config'
-import {setGames, setRecommendations} from './state'
+import {setGames, setRecommendations, setReviews} from './state'
 import history from '../../History';
 
 export const newReview = (data) => (dispatch) => {
@@ -57,8 +57,8 @@ export const getReviews = (gameID) => {
     
     return (dispatch) => {
         axios.get(`/games/${gameID}/reviews`).then( ( {data}) => {
-            // console.log(data.data);
-            // console.log("here")
+            console.log(data.data);
+            dispatch(setReviews(data.data))
         }).catch( (error) => console.log(error))
     }
 }

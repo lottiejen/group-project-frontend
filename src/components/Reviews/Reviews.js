@@ -13,18 +13,12 @@ class Reviews extends Component
     componentDidMount(){
         this.props.fetchReviews(this.props.id);
     }
-    
-    useEffect(() => { 
-        return (dispatch) => {
-            axios.get(`/games/${props.id}/reviews`).then( ( {data}) => { console.log(data.data)})
-        }
-    });
 
     render() {
         return (
         <> 
             <h3 className="header__style"> Reviews </h3>
-            {reviews.data.map( (review, index) => {
+            {this.props.reviews.map( (review, index) => {
                 return (
                     <div className=" reviews__card card" key={index} >
                         <div className="card-body" >
@@ -38,7 +32,7 @@ class Reviews extends Component
             
             
             <div className="reviews__newreview">
-                <NewReview gameID={ props.id } />
+                <NewReview gameID={ this.props.id } />
             </div>
         </>
     )
