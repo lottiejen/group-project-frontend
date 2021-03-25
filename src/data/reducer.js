@@ -31,11 +31,19 @@ const incrementGame = (state) => {
     }
 }
 
+const setGameReviews = (state, action) => {
+    return {
+        ...state,
+        reviews: action.data
+    }
+}
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "SET_GAMES": return setGames(state, action)
         case "SET_RECOMMENDATIONS": return setRecommendations(setGames(state, action), action)
         case "INCREMENT_GAME": return incrementGame(state)
+        case "SET_REVIEWS": return setGameReviews(state, action)
         default: return state;
     }
 }
