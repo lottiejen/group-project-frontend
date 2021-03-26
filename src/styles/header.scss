@@ -103,6 +103,13 @@ body {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .nav__list{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 
