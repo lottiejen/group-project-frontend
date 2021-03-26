@@ -33,8 +33,44 @@ body {
         font-size: 1rem;
         margin: 0.5rem;
     }
+
+
+    &__user-login{
+        position: absolute;
+        top: 20px;
+        right: 50px;
+    }
+
+    &__user {
+        height: 20px;
+        width: 20px;
+        fill: white;
+
+        &:hover{
+            fill: #F4A261;
+        }
+    }
+
+    &__login {
+        color: white;
+        margin: 0.5rem;
+        text-transform: uppercase;
+	    text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        &:hover{
+            color: $orange;
+            text-decoration: underline;
+        }
+    }
 }
 
+@media screen and (max-width: 900px){
+    .header__user-login{
+        position: static;
+    }
+}
 .nav{
     list-style: none;
 	align-items: center;

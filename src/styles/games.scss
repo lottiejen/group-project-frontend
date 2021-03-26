@@ -31,10 +31,31 @@
     justify-content: space-between;
 }
 
-
-
 .list-item {
     list-style: "🎲";
     margin-left: 1.5rem;
 }
 
+.searchbar{
+    width: 30%;
+    margin: 0 auto;
+
+    &__icon{
+        height: 25px;
+        width: 25px;
+        display: inline-block;
+        margin: 5px;
+    }
+
+    &__input{
+        margin: 5px;
+        display: inline-block;
+    }
+
+    &__genres{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+}
