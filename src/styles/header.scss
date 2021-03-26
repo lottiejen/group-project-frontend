@@ -84,11 +84,17 @@ body {
 
     &__item {
         color: white;
-        margin: 0.5rem;
         text-transform: uppercase;
 	    text-decoration: none;
         font-weight: 600;
-        font-size: 1.2rem;
+
+        @media only screen and (min-width:370px) {
+            font-size: 2rem;
+            margin: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        
 
         &:hover{
             color: $orange;
@@ -97,6 +103,13 @@ body {
     }
 }
 
+@media screen and (max-width: 500px) {
+    .nav__list{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 

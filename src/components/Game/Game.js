@@ -70,7 +70,7 @@ class Game extends Component {
                 <GameInfo difficulty={ difficulty} time={ time } min_players={ min_players} max_players={ max_players}/>
 
                 <h4 className="mt-4 gamecard__subtitle header__style">Genres</h4> 
-                <ul className="mb-4">
+                <ul className="mb-4 gamecard__badge">
                     {genres.map ((genre) => (
                         <li className="badge gamecard__genre" key={genre}>{genre}</li>
                     ))}

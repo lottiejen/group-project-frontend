@@ -7,8 +7,10 @@
 .gamecard-img {
     box-sizing: border-box;
     padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     border-radius: 1.25rem;
     max-height: 500px;
+    max-width: 100%
 }
 
 .gamecard__figure {
@@ -21,11 +23,19 @@
 }
 
 .gamecard__title{
-    font-size: 3.5rem;
+    font-size: 2rem;
+    @media only screen and (min-width:700px) {
+        font-size: 3.5rem;
+    }
 }
 
 .gamecard__subtitle{
-    font-size: 2rem;
+    font-size: 1.3rem;
+    @media only screen and (min-width:700px) {
+        font-size: 2rem;
+    }
+
+    
 }
 
 .gamecard__nextlink{
@@ -41,11 +51,21 @@
 .gamecard__genre{
     background: $yellow;
     color: black;
-    margin: 5px;
-    text-transform: uppercase;
-
+    &:not(:last-child){
+       margin-right: 5px;
+    }
     &:hover{
         background: $purple;
         color: white;
     }
+}
+
+.gamecard__badge{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    
 }

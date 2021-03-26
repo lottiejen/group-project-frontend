@@ -37,7 +37,10 @@ $header-font: 'Kavoon', cursive;
 
   .glass {
     background: white;
-    width: 70%;
+    @media only screen and (min-width: 700px) {
+      width: 70%;
+    }
+    
     background: linear-gradient(
       to right bottom,
       rgba(255, 255, 255, 0.7),

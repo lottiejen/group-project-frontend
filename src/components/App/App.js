@@ -7,6 +7,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import history from '../../History';
 import { Component } from 'react';
 import Error from '../Error';
+import Footer from '../Footer/Footer';
 
 class App extends Component 
 {
@@ -20,6 +21,7 @@ class App extends Component
       <Switch>
         <Route exact path="/">
           <Input />
+          <Footer />
         </Route>
         <Route path={`/games/:id`} render={ ({ match }) => (
           <Game gameID={match.params.id}/>
