@@ -1,0 +1,50 @@
+.searchform {
+    background: $turquoise;
+    box-sizing: border-box;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__inputs{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    &__input{
+        border-radius: 10px;
+    }
+
+    &__title{
+        color: $yellow;
+    }
+
+}
+
+.icon__2{
+    z-index: -1;
+    position: absolute;
+    right: 70px;
+    bottom: 80px;
+    height: 200px;
+}
+
+.icon__3{
+    z-index: -1;
+    position: absolute;
+    left: 100px;
+    bottom: 80px;
+    height: 150px;
+}
+
+.search-error {
+    color: red;
+    font-size: 1.5rem;
+    text-align: center;
+}

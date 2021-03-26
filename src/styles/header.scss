@@ -1,0 +1,66 @@
+body {
+    background: linear-gradient( $turquoise, #DFF6F4);
+    min-height: 100vh;
+}
+
+
+.header {
+  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    
+    &__container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        letter-spacing: 5px;
+        margin: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: $header-font;
+    }
+
+    &__subtitle {
+        color: white;
+        font-weight: 600;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+}
+
+.nav{
+    list-style: none;
+	align-items: center;
+	margin: 0.5rem;
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__item {
+        color: white;
+        margin: 0.5rem;
+        text-transform: uppercase;
+	    text-decoration: none;
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        &:hover{
+            color: $orange;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
