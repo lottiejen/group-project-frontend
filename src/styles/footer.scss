@@ -9,13 +9,15 @@
 
 }
 
-
 .socials {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 50%;
     margin: 0.5rem 1rem;
+    @media all and (max-width:$breakpoint--md) {
+        width: 80%;
+    }
 }
 
 .socials_img {
@@ -49,8 +51,8 @@
    
    .socials_img:hover div{
     width: 75px;
-    // padding: 8px 5px;
     visibility: visible;
     opacity: 0.7;
     text-align: center; 
    }
+
