@@ -21,6 +21,7 @@ class App extends Component
       <Switch>
         <Route exact path="/">
           <Input />
+          <Footer />
         </Route>
         <Route path={`/games/:id`} render={ ({ match }) => (
           <Game gameID={match.params.id}/>
@@ -31,7 +32,6 @@ class App extends Component
         </Route>
       </Switch>
       <Error />
-      <Footer />
       </div>
     </HashRouter>
   )
