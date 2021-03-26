@@ -53,7 +53,10 @@
     &:not(:last-child){
        margin-right: 5px;
     }
-    
+    &:hover{
+        background: $purple;
+        color: white;
+    }
 }
 
 .gamecard__badge{
@@ -63,8 +66,5 @@
     padding: 0;
     text-transform: uppercase;
 
-    &:hover{
-        background: $purple;
-        color: white;
-    }
+    
 }
