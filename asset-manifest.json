@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/group-project-frontend/static/css/main.3708b0c0.chunk.css",
-    "main.js": "/group-project-frontend/static/js/main.39ed78a3.chunk.js",
-    "main.js.map": "/group-project-frontend/static/js/main.39ed78a3.chunk.js.map",
+    "main.css": "/group-project-frontend/static/css/main.8dbc3217.chunk.css",
+    "main.js": "/group-project-frontend/static/js/main.ca4f5c07.chunk.js",
+    "main.js.map": "/group-project-frontend/static/js/main.ca4f5c07.chunk.js.map",
     "runtime-main.js": "/group-project-frontend/static/js/runtime-main.3cf35c04.js",
     "runtime-main.js.map": "/group-project-frontend/static/js/runtime-main.3cf35c04.js.map",
-    "static/js/2.24013a36.chunk.js": "/group-project-frontend/static/js/2.24013a36.chunk.js",
-    "static/js/2.24013a36.chunk.js.map": "/group-project-frontend/static/js/2.24013a36.chunk.js.map",
+    "static/js/2.40366a74.chunk.js": "/group-project-frontend/static/js/2.40366a74.chunk.js",
+    "static/js/2.40366a74.chunk.js.map": "/group-project-frontend/static/js/2.40366a74.chunk.js.map",
     "static/js/3.b43ed25a.chunk.js": "/group-project-frontend/static/js/3.b43ed25a.chunk.js",
     "static/js/3.b43ed25a.chunk.js.map": "/group-project-frontend/static/js/3.b43ed25a.chunk.js.map",
     "index.html": "/group-project-frontend/index.html",
-    "static/css/main.3708b0c0.chunk.css.map": "/group-project-frontend/static/css/main.3708b0c0.chunk.css.map",
-    "static/js/2.24013a36.chunk.js.LICENSE.txt": "/group-project-frontend/static/js/2.24013a36.chunk.js.LICENSE.txt",
+    "static/css/main.8dbc3217.chunk.css.map": "/group-project-frontend/static/css/main.8dbc3217.chunk.css.map",
+    "static/js/2.40366a74.chunk.js.LICENSE.txt": "/group-project-frontend/static/js/2.40366a74.chunk.js.LICENSE.txt",
     "static/media/boardgame.87fd055a.png": "/group-project-frontend/static/media/boardgame.87fd055a.png",
-    "static/media/boardgame2.ec18c5f4.png": "/group-project-frontend/static/media/boardgame2.ec18c5f4.png"
+    "static/media/boardgame2.ec18c5f4.png": "/group-project-frontend/static/media/boardgame2.ec18c5f4.png",
+    "static/media/magnifier.752f9c24.svg": "/group-project-frontend/static/media/magnifier.752f9c24.svg",
+    "static/media/user.29bcb73b.svg": "/group-project-frontend/static/media/user.29bcb73b.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.3cf35c04.js",
-    "static/js/2.24013a36.chunk.js",
-    "static/css/main.3708b0c0.chunk.css",
-    "static/js/main.39ed78a3.chunk.js"
+    "static/js/2.40366a74.chunk.js",
+    "static/css/main.8dbc3217.chunk.css",
+    "static/js/main.ca4f5c07.chunk.js"
   ]
 }
