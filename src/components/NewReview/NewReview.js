@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import ReactStars from "react-rating-stars-component";
-import { bindActionCreators } from 'redux';
 import Button from "../Button/Button";
 
 const NewReview = ( { gameID, handleNewReview }) => {
