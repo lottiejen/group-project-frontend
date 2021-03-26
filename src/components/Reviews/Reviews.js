@@ -1,11 +1,6 @@
-import {reviews} from '../../data/dummyData';
-
 import {Component} from 'react';
-
 import Stars from './Stars';
 import NewReview from '../NewReview';
-import { useEffect } from 'react';
-import axios from '../../data/axios-config';
 
 //passed in game ID so can do an API call to get the reviews for that game -> when time comes for linking up API
 class Reviews extends Component 

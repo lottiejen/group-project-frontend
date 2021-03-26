@@ -41,4 +41,11 @@
 .gamecard__genre{
     background: $yellow;
     color: black;
+    margin: 5px;
+    text-transform: uppercase;
+
+    &:hover{
+        background: $purple;
+        color: white;
+    }
 }
