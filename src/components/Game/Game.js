@@ -17,6 +17,7 @@ class Game extends Component {
     componentDidMount() {
         this.props.incrementDisplayGame()
         this.props.handleLoad()
+ 
     }
 
     componentDidUpdate(previousProps) {
@@ -24,6 +25,7 @@ class Game extends Component {
         if(previousProps.gameID !== this.props.gameID){
             this.props.incrementDisplayGame();
         }
+        
     }
 
     handleClickNext(e){
@@ -66,7 +68,7 @@ class Game extends Component {
                     <p className="gamecard__text">Don't fancy playing this game? </p>
                     <p className="gamecard__text">Click below for the next recommendation!</p>
                     <div className="button">
-                        <Link to={`/games/${nextGameID}`} ><p className="gamecard__nextlink header__style">Next Game</p></Link>
+                        <Link to={`/games/${nextGameID}`} style={{ textDecoration: 'none' }}><p className="gamecard__nextlink header__style">Next Game</p></Link>
                     </div>
                 </>}
 

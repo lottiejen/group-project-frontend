@@ -14,6 +14,14 @@ class Reviews extends Component
         this.props.fetchReviews(this.props.id);
     }
 
+    componentDidUpdate(prevProps){
+
+        if(prevProps.id !== this.props.id){
+            this.props.fetchReviews(this.props.id);
+        }
+        
+    }
+
     render() {
         return (
         <> 
