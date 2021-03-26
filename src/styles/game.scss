@@ -61,4 +61,10 @@
     justify-content: center;
     margin: 0;
     padding: 0;
+    text-transform: uppercase;
+
+    &:hover{
+        background: $purple;
+        color: white;
+    }
 }

@@ -48,7 +48,7 @@ export const getRecommendations = (data) => {
             if (data.data.length !== 0){
                 dispatch(setRecommendations(data.data))
                 let firstID = data.data[0].id
-                history.push(`games/${firstID}`)
+                history.push(`/games/${firstID}`)
             } else {                
                 dispatch(setError("Your Search Returned No Results"))
                 setTimeout(() => {dispatch(setError(""))}, 6000)                               
