@@ -43,6 +43,16 @@
     height: 150px;
 }
 
+@media screen and (max-width: 750px){
+    .icon__2{
+        display: none;
+    }
+    .icon__3{
+        right: 40%;
+        left: 40%;
+    }
+}
+
 .search-error {
     color: red;
     font-size: 1.5rem;
