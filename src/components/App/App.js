@@ -3,7 +3,7 @@ import Header from  '../Header/Header';
 import Input from '../Input';
 import Game from '../Game';
 import Games from '../Games';
-import { Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import history from '../../History';
 import { Component } from 'react';
 import Error from '../Error';
@@ -14,7 +14,7 @@ class App extends Component
 
   render() {
     return (
-    <Router history={ history }>
+    <HashRouter history={ history }>
       <Header />
       <div className="container">
       <Switch>
@@ -31,7 +31,7 @@ class App extends Component
       </Switch>
       <Error />
       </div>
-    </Router>
+    </HashRouter>
   )
   }
   
